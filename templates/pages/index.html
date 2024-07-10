@@ -55,8 +55,8 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="{% static 'img/logo.png' %}" class="logo" alt="">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/logo.png' %}" class="logo" alt="" style="width: 100px; height: auto;">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
@@ -64,10 +64,10 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item active mr-3">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href={% url 'index'%}>Home</a>
           </li>
           <li class="nav-item mr-3">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href={% url 'about'%}>About</a>
           </li>
           <li class="nav-item mr-3">
             <a class="nav-link" href="listings.html">Featured Listings</a>
@@ -92,6 +92,7 @@
 
   <!-- Showcase -->
   <section id="showcase">
+    {% comment %} <img src="{% static 'img/showcase.jpg' %}" alt=""> {% endcomment %}
     <div class="container text-center">
       <div class="home-search p-5">
         <div class="overlay p-5">
@@ -222,7 +223,7 @@
         <!-- Listing 1 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
-            <img class="card-img-top" src="{% static 'img/homes/home-1.jpg' %}" alt="">
+            {% comment %} <img class="card-img-top" src="{% static 'img/homes/home-1.jpg' %}" alt=""> {% endcomment %}
             <div class="card-img-overlay">
               <h2>
                 <span class="badge badge-secondary text-white">$490,000</span>
@@ -265,7 +266,7 @@
         <!-- Listing 2 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
-            <img class="card-img-top" src="{% static 'img/homes/home-2.jpg' %}" alt="">
+            {% comment %} <img class="card-img-top" src="{% static 'img/homes/home-2.jpg' %}" alt=""> {% endcomment %}
             <div class="card-img-overlay">
               <h2>
                 <span class="badge badge-secondary text-white">$550,000</span>
@@ -308,7 +309,7 @@
         <!-- Listing 3 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
-            <img class="card-img-top" src="{% static 'img/homes/home-3.jpg' %}" alt="">
+            {% comment %} <img class="card-img-top" src="{% static 'img/homes/home-3.jpg' %}" alt=""> {% endcomment %}
             <div class="card-img-overlay">
               <h2>
                 <span class="badge badge-secondary text-white">$580,000</span>
@@ -388,6 +389,7 @@
 
   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/lightbox.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
 </body>
 

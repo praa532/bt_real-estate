@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    #My Apps
     "pages.apps.PagesConfig",
+    "listing.apps.ListingConfig",
+    "realtors.apps.RealtorsConfig",
 ]
 
 MIDDLEWARE = [
@@ -77,8 +81,11 @@ WSGI_APPLICATION = "btre_project.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "hihelli234",
+        "HOST": "localhost"
     }
 }
 
@@ -126,8 +133,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 #Manually Added
 
-# STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / 'static',
 ]
